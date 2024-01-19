@@ -6,58 +6,58 @@
   height: 120vh;
   background-color: #fff;
   left: 0;
-
-  &__burger {
+  &__burger{
     display: none;
-
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    z-index: 4;
   }
-
   &__logo {
     margin-bottom: 60px;
     padding-top: 36px;
   }
-
   &__items {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-
   &__profile {
     position: absolute;
     bottom: 76px;
   }
+}
 
-  @media (max-width: 1600px) {
+@media (max-width: 1600px) {
+  .menu{
     position: absolute;
     z-index: 2;
     display: none;
     height: 100vh;
-
-    &__logo,
-    &__items,
-    &__profile {
-      display: none;
-    }
-
+  }
+  .menu__logo,
+  .menu__items,
+  .menu__profile {
+    display: none;
+  }
+  .menu{
     &__burger {
+      width: 20px;
+      height: 20px;
       display: block;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      z-index: 4;
     }
-
+  }
+}
+.open{
+  display: block;
+}
+@media (max-width: 1600px) {
+  .menu {
     height: 105vh;
   }
-
-  @media (max-width: 425px) {
-    width: 100%;
-  }
-
-  &.open {
-    display: block;
+}
+@media (max-width: 425px) {
+  .menu {
+    width: 100%
   }
 }
