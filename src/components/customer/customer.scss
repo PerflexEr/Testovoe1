@@ -1,0 +1,32 @@
+.customer{
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: #292D32;
+  align-items: center;
+  border-bottom: 1px solid #EEE;
+  max-width: 968px;
+  &__status{
+    text-align: center;
+  }
+  cursor: pointer;
+}
+.active__status{
+  width: 80px;
+  border-radius: 4px;
+  border: 1px solid #00B087;
+  color: #008767;
+  background: rgba(22, 192, 152, 0.38);
+  text-align: center;
+  padding: 4px 0;
+
+}
+.inactive__status{
+  width: 80px;
+  color: #DF0404;
+  border-radius: 4px;
+  border: 1px solid #DF0404;
+  background: #FFC5C5;
+  text-align: center;
+  padding-top: 4px 0;
+}
