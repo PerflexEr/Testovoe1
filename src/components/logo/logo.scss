@@ -1,19 +1,22 @@
-.logo{
+.logo {
   display: flex;
   cursor: pointer;
   gap: 6px;
-  &__main{
+
+  &__main {
     display: flex;
     align-items: center;
     gap: 8px;
-    &-title{
+
+    &-title {
       font-size: 26px;
       font-weight: 600;
       letter-spacing: 0.26px;
     }
   }
-  &__version{
+
+  &__version {
     padding-top: 15px;
-    color: #838383
+    color: #838383;
   }
 }

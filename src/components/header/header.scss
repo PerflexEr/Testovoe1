@@ -1,4 +1,8 @@
-.header{
+.header {
   color: #000;
   font-size: 24px;
+
+  @media (max-width: 620px) {
+    text-align: center;
+  }
 }

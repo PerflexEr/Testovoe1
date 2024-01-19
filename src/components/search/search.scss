@@ -1,14 +1,16 @@
-.search{
+.search {
   position: relative;
   max-width: 216px;
-  &__icon{
+
+  &__icon {
     position: absolute;
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  &__input{
+
+  &__input {
     border: none;
     width: 100%;
     padding: 10px;

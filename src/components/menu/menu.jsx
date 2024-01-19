@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './menu.scss'
 import Logo from '../logo/logo';
 import MenuItem from '../menuItem/menuItem';
@@ -7,13 +7,33 @@ import Profile from '../profile/profile';
 import profileImg from "./../../images/profile-picture.svg"
 
 const Menu = () => {
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const onBurgerClick = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="menu">
-      <div className="menu__logo">
+    <>
+      <svg
+        className='menu__burger'
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="30"
+        height="30"
+        fill="#333"
+        onClick={onBurgerClick}
+      >
+        <rect width="24" height="4" rx="2" />
+        <rect y="10" width="24" height="4" rx="2" />
+        <rect y="20" width="24" height="4" rx="2" />
+      </svg>
+    <div className={`menu ${isMenuOpen ? 'open' : ''}`} >
+      <div className={`menu__logo ${isMenuOpen ? 'open' : ''}`}>
         <Logo/>
       </div>
-
-      <div className="menu__items">
+      <div className={`menu__items ${isMenuOpen ? 'open' : ''}`}>
         <MenuItem svg={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#9197B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M16.28 13.61C15.15 14.74 13.53 15.09 12.1 14.64L9.51001 17.22C9.33001 17.41 8.96001 17.53 8.69001 17.49L7.49001 17.33C7.09001 17.28 6.73001 16.9 6.67001 16.51L6.51001 15.31C6.47001 15.05 6.60001 14.68 6.78001 14.49L9.36001 11.91C8.92001 10.48 9.26001 8.86001 10.39 7.73001C12.01 6.11001 14.65 6.11001 16.28 7.73001C17.9 9.34001 17.9 11.98 16.28 13.61Z" stroke="#9197B3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,11 +77,12 @@ const Menu = () => {
 
       </div>
 
-      <div className="menu__profile">
+      <div className={`menu__profile ${isMenuOpen ? 'open' : ''}`}>
         <Profile img={profileImg} name={'Evano'} position={'Project Manager'} />
       </div>
 
     </div>
+    </>
   );
 };
 

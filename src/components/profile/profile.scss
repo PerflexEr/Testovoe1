@@ -1,10 +1,11 @@
-.profile{
+.profile {
   display: flex;
   cursor: pointer;
   gap: 12px;
-    &__description{
-      &-position{
-        color: #757575;
-      }
+
+  &__description {
+    &-position {
+      color: #757575;
     }
+  }
 }

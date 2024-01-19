@@ -1,31 +1,65 @@
-.customer{
+.customer {
   display: grid;
   padding: 20px 0;
-  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
   color: #292D32;
   align-items: center;
   border-bottom: 1px solid #EEE;
-  &__status{
+  grid-template-columns: repeat(6, 1fr);
+  cursor: pointer;
+
+  &__status {
     text-align: center;
   }
-  cursor: pointer;
 }
-.active__status{
+
+.active__status,
+.inactive__status {
   width: 80px;
   border-radius: 4px;
+  text-align: center;
+  padding: 4px 0;
+  margin: 0 auto;
+}
+
+.active__status {
   border: 1px solid #00B087;
   color: #008767;
   background: rgba(22, 192, 152, 0.38);
-  text-align: center;
-  padding: 4px 0;
-
 }
-.inactive__status{
-  width: 80px;
-  color: #DF0404;
-  border-radius: 4px;
+
+.inactive__status {
   border: 1px solid #DF0404;
+  color: #DF0404;
   background: #FFC5C5;
-  text-align: center;
-  padding: 4px 0;
+}
+
+@media (max-width: 1024px) {
+  .customer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 6px;
+  }
+}
+
+@media (max-width: 620px) {
+  .customer {
+    text-align: center;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 6px;
+  }
+
+  .active__status,
+  .inactive__status {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .customer {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 6px;
+  }
 }
