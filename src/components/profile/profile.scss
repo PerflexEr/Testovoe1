@@ -1,0 +1,9 @@
+.profile{
+  display: flex;
+  gap: 12px;
+    &__description{
+      &-position{
+        color: #757575;
+      }
+    }
+}
