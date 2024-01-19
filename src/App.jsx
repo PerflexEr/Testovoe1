@@ -4,14 +4,11 @@ import PagesNavBar from "./components/pagesNavbar/pagesNavBar";
 import Customer from "./components/customer/customer";
 import Header from "./components/header/header";
 import Search from "./components/search/search";
+import Customers from "./components/customers/customers";
 function App() {
   return (
    <div className="container">
-      <Customer name={'Jane Cooper'} company={'Microsoft'} number={'(225) 555-0118'} email={'jane@microsoft.com'} country={'United States'} status={'active'} />
-      <Customer  />
-      <Customer name={'Jane Cooper'} company={'Microsoft'} number={'(225) 555-0118'} email={'jane@microsoft.com'} country={'United States'} status={'inactive'} />
-      <Header></Header>
-      <Search/>
+      <Customers/>
     </div>
   );
 }
