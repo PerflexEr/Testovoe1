@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 28px;
+  height: 100vh;
+  &__logo {
+    margin-bottom: 60px;
+    padding-top: 36px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__profile {
+    position: absolute;
+    bottom: 76px;
+  }
+}

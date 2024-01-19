@@ -1,13 +1,10 @@
 
-import Logo from "./components/logo/logo";
-import MenuItem from "./components/menuItem/menuItem";
-import Profile from "./components/profile/profile";
-import profileImg from './images/profile-picture.svg'
+import Menu from "./components/menu/menu";
+
 function App() {
   return (
    <div className="">
-    <Logo/>
-    <Profile img={profileImg} name={'Evano'} position={'Project Manager'} />
+      <Menu/>
     </div>
   );
 }
