@@ -1,10 +1,10 @@
 
 import Menu from "./components/menu/menu";
-
+import PagesNavBar from "./components/pagesNavbar/pagesNavBar";
 function App() {
   return (
    <div className="">
-      <Menu/>
+      <PagesNavBar/>
     </div>
   );
 }
