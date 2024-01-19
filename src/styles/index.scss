@@ -12,9 +12,19 @@ body{
   line-height: normal;
   letter-spacing: -0.14px;
   background: #FAFBFF;
+  position: relative;
 }
 
 .container{
-  margin: 0 auto;
+
   max-width: 968px;
+}
+
+.app{
+  display: flex;
+  gap: 71px;
+}
+.header{
+  margin-top: 41px;
+  margin-bottom: 51px;
 }
