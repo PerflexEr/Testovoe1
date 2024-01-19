@@ -1,0 +1,55 @@
+.item{
+  padding: 11px 11px 8px 11px;
+  width: 250px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+
+  &__content{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    &-title{
+      color: #9197B3;
+    }
+  }
+  &__chevron{
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  &:hover {
+    background-color: #5932ea;
+    border-radius: 8px;
+    .item{
+      &__content{
+        &-title{
+          color: white;
+        }
+        &-img{
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+    }
+      &__chevron {
+        svg {
+          path {
+            stroke: white;
+          }
+        }
+      }
+    }
+  }
+}
+
